@@ -1,5 +1,5 @@
 {% set name = "WTForms-JSON" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3d3193819a83daa14b3cb5e029fe807fb4a70172ec299abc07d9d58d51b2ecc4
+  sha256: 27fde015d2d0642732da7ba304e6d17aea2744f79d7a9f963f9f47045a35ff6d
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Adds smart json support for WTForms. Useful for when using WTForms with RESTful APIs.'
+  summary: Adds smart json support for WTForms. Useful for when using WTForms with RESTful APIs.
 
   doc_url: http://wtforms-json.readthedocs.org/
   dev_url: https://github.com/kvesteri/wtforms-json
